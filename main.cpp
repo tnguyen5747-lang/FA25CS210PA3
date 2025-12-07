@@ -146,7 +146,7 @@ bool dfs(int r, int c, int exit_r, int exit_c, const vector<vector<int>>& maze,
         int next_r = r + dr[i];
         int next_c = c + dc[i];
 
-        // Checks made before the start of next DFS.
+        // Checks made before the start of next DFS, ensures that there are no loops, and validation of checks.
         if (next_r < 0 || next_r >= N || next_c < 0 || next_c >= M) continue;
         if (maze[next_r][next_c] == 1) continue;
         if (visited[next_r][next_c]) continue;
